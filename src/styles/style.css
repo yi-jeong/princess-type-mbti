@@ -1,0 +1,96 @@
+.wrap{
+  background: #fffafa;
+}
+
+.main{
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+}
+
+.main .header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.main .background-top{
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+
+.main .header span{
+  padding: .3rem 1rem;
+  display: inline-block;
+  border-radius: 50rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: #ff7474;
+  color: #fff;
+}
+
+.main .header .title{
+  margin-top: .75rem;
+  padding-top: .3rem;
+  position: relative;
+  z-index: 0;
+  font-family: 'yg-jalnan';
+  font-size: 2.5rem;
+  color: #ff7474;
+  text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff;
+}
+
+.main .contents{
+  height: calc( 100vh - 150px - 120px);
+}
+
+.main .button{
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc( 100% - 30px );
+  max-width: 767px;
+  height: 120px;
+}
+
+.main .button a{
+  display: block;
+  width: 100%;
+}
+
+.main .button button{
+  width: 100%;
+  height:60px;
+  background: #ff7474;
+  border:transparent;
+  border-radius: 60px;
+  color: #fff;
+  font-weight: 500;
+  transition: .5s;
+}
+
+.main .button button:hover{
+  background: #fff;
+  color: #ff7474;
+}
+
+
+.question{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+
+.question .nowscore{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100px;
+}
+
+.result{
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
