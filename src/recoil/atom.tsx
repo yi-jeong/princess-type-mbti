@@ -1,5 +1,5 @@
-import { ScoreDatas, QuestionDatas } from "@/pages/Data/testDatas";
-import { ScoreData } from "@/pages/Data/type";
+import { ScoreDatas, QuestionDatas } from "@/Data/testDatas";
+import { ScoreData } from "@/Data/type";
 import { atom } from "recoil";
 
 /* 현재 페이지의 위치 */

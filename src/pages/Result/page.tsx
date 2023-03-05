@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useRecoilValue } from "recoil";
-import { resultDatas } from "../Data/testDatas";
+import { resultDatas } from "../../Data/testDatas";
 
 const ResultTitle = styled.div`
     display: flex;

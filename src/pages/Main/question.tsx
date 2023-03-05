@@ -6,7 +6,7 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import NowScore from "./scorePercentBar";
 import scoreIcon from "../../images/score-icon.png"; 
 import { css } from "@emotion/react";
-import { ScoreData } from "../Data/type";
+import { ScoreData } from "../../Data/type";
 
 
 const QuestionCheck = styled.div`
