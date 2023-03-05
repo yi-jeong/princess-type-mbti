@@ -1,12 +1,14 @@
 {
   "name": "princess-type",
+  "homepage": "https://yi-jeong.github.io/princess-type-mbti",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && next export && npx gh-pages -d out"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -21,5 +23,8 @@
     "react-dom": "18.2.0",
     "recoil": "^0.7.7",
     "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
