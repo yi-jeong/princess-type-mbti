@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
+    "vercel-deploy": "next build && next export"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
