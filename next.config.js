@@ -7,8 +7,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: isProd ? '/princess-type-mbti/' : '',
-  basePath: '/princess-type-mbti'
 }
 
 module.exports = nextConfig
