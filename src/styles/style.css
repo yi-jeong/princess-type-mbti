@@ -1,4 +1,5 @@
 .wrap{
+  overflow: hidden;
   background: #fffafa;
 }
 
@@ -9,10 +10,15 @@
 }
 
 .main .header{
+  position: relative;
+  top: -200px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 150px;
+  transition: .5s;
+  animation: titleAni 1s;
+  animation-fill-mode: forwards;
 }
 
 .main .background-top{
@@ -68,6 +74,10 @@
   color: #fff;
   font-weight: 500;
   transition: .5s;
+  opacity: 0;
+  animation: opacityAni 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
 }
 
 .main .button button:hover{
@@ -90,7 +100,20 @@
 }
 
 .result{
+  overflow: hidden;
   width: 100%;
   min-height: 100vh;
   background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+  animation: opacityAni 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes titleAni{
+  0%{ top: -200px }
+  100%{ top:0; }
+}
+
+@keyframes opacityAni {
+  0%{ opacity: 0; }
+  100%{ opacity: 1; }
 }

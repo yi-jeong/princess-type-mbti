@@ -165,7 +165,7 @@ export const resultDatas = [
     {
         id:0,
         type: "ent",
-        imgSrc: "",
+        imgSrc: "/images/result-ent.png",
         subText: "자신감 뿜뿜! 최고의 리더쉽",
         title: "호랑이 공주",
         content: [
@@ -178,7 +178,7 @@ export const resultDatas = [
     {
         id:1,
         type: "est",
-        imgSrc: "",
+        imgSrc: "/images/result-est.png",
         subText: "안전한 모험을 즐기는",
         title: "사자 공주",
         content: [
@@ -190,7 +190,7 @@ export const resultDatas = [
     {
         id:2,
         type: "enf",
-        imgSrc: "",
+        imgSrc: "/images/result-enf.png",
         subText: "남을 생각하는 마음씨가 예쁜",
         title: "토끼 공주",
         content: [
@@ -203,7 +203,7 @@ export const resultDatas = [
     {
         id:3,
         type: "esf",
-        imgSrc: "",
+        imgSrc: "/images/result-esf.png",
         subText: "좋아하는 것이 많은 최고의 사교성",
         title: "강아지 공주",
         content: [
@@ -217,7 +217,7 @@ export const resultDatas = [
     {
         id:4,
         type: "int",
-        imgSrc: "",
+        imgSrc: "/images/result-int.png",
         subText: "혁신적인 아이디어 뱅크",
         title: "펭귄 공주",
         content: [
@@ -231,7 +231,7 @@ export const resultDatas = [
     {
         id:5,
         type: "ist",
-        imgSrc: "",
+        imgSrc: "/images/result-ist.png",
         subText: "모든 것이 다 귀찮아",
         title: "고양이 공주",
         content: [
@@ -245,7 +245,7 @@ export const resultDatas = [
     {
         id:6,
         type: "inf",
-        imgSrc: "",
+        imgSrc: "/images/result-inf.png",
         subText: "외향적이면서 내향적인",
         title: "사슴 공주",
         content: [
@@ -259,7 +259,7 @@ export const resultDatas = [
     {
         id:7,
         type: "isf",
-        imgSrc: "",
+        imgSrc: "/images/result-isf.png",
         subText: "전통적인 가치와 규범을 중요시 하는",
         title: "고슴도치 공주",
         content: [

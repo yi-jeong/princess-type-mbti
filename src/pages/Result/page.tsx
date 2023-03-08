@@ -1,10 +1,12 @@
 import { resultScoreState } from "@/recoil/atom";
 import styled from "@emotion/styled"
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useRecoilValue } from "recoil";
 import { resultDatas } from "../../Data/testDatas";
+import { keyframes } from "@emotion/react";
 
 const ResultTitle = styled.div`
     display: flex;
@@ -37,11 +39,45 @@ const ResultTitle = styled.div`
 `
 
 const ResultImage = styled.div`
+    position: relative;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 300px;
-    background: #fff;
+
+`
+
+const ImageBox = styled.div`
+    position: relative;
+    text-align: center;
+`
+
+const IconImageFirst = styled(Image)<{keyFrameName:string}>`
+    position: absolute;
+    top:0;
+    left:0;
+    animation: ${props => props.keyFrameName} 3s linear infinite;
+
+    @media (min-width: 420px) {
+        transform: translateX(50%);
+    }
+`
+
+const IconImageSecond = styled(Image)<{keyFrameName:string}>`
+    position: absolute;
+    top:0;
+    right:0;
+    animation: ${props => props.keyFrameName} 5s linear infinite;
+
+    @media (min-width: 420px) {
+        transform: translateX(-50%);
+    }
+`
+
+const MainImage = styled(Image)<{keyFrameName:string}>`
+    position: relative;
+    animation: ${props => props.keyFrameName} 3s linear infinite;
 `
 
 const ResultContent = styled.div`
@@ -56,7 +92,7 @@ const ResultContent = styled.div`
         ul{ 
             margin-left: 20px; 
 
-            li{ margin: 0.5rem 0; text-indent: -20px; }
+            li{ margin: 0.5rem 0; text-indent: -20px; font-weight: 500; }
         }
         
     }
@@ -81,7 +117,37 @@ const StyledLink = styled(Link)`
         background: #fff;
         color: #ff7474;
     }
-`;
+`
+
+const doungdoung = keyframes`
+    0%{
+        top: -.3rem
+    }
+    50%{
+        top: .3rem
+    }
+    100%{
+        top: -.3rem
+    }
+`
+
+const yorijori = keyframes`
+    0%{
+        transform: rotate(0)
+    }
+    25%{
+        transform: rotate(35deg)
+    }
+    50%{
+        transform: rotate(0)
+    }
+    75%{
+        transform: rotate(-35deg)
+    }
+    100%{
+        transform: rotate(0)
+    }
+`
 
 export default function ResultPage(){
     const router = useRouter();
@@ -101,7 +167,16 @@ export default function ResultPage(){
                     <h2>{resultData?.title}</h2>
                 </div>
             </ResultTitle>
-            <ResultImage>이미지 영역</ResultImage>
+            <ResultImage>
+                <div className="container">
+                    <ImageBox>
+                        <IconImageFirst keyFrameName={yorijori} src={"/images/result-icon-02.png"} alt="" width={100} height={100} ></IconImageFirst>
+                        <IconImageSecond keyFrameName={yorijori} src={"/images/result-icon-01.png"} alt="" width={100} height={100} ></IconImageSecond>
+
+                        <MainImage keyFrameName={doungdoung} src={`${resultData?.imgSrc}`} alt={""} width={300} height={320}></MainImage>
+                    </ImageBox>
+                </div>
+            </ResultImage>
             <ResultContent>
                 <div className="container">
                     <div className="box">
