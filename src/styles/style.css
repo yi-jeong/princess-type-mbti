@@ -47,7 +47,16 @@
 }
 
 .main .contents{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: calc( 100vh - 150px - 120px);
+  opacity: 0;
+  animation: opacityAni 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  
 }
 
 .main .button{
@@ -73,11 +82,9 @@
   border-radius: 60px;
   color: #fff;
   font-weight: 500;
+  font-size: 1rem;
   transition: .5s;
-  opacity: 0;
-  animation: opacityAni 2s;
-  animation-fill-mode: forwards;
-  animation-delay: 1s;
+
 }
 
 .main .button button:hover{

@@ -1,8 +1,64 @@
 import { nowPageState, percentState, resultScoreState, scoreDataState } from '@/recoil/atom';
+import styled from '@emotion/styled';
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useEffect } from 'react';
 import { useSetRecoilState } from 'recoil';
+import { keyframes } from '@emotion/react';
+
+const ResultImage = styled.div`
+    position: relative;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+`
+
+const ImageBox = styled.div`
+    position: relative;
+    text-align: center;
+`
+
+const IconImageFirst = styled(Image)<{keyFrameName:string}>`
+    position: absolute;
+    top:0;
+    left:0;
+    animation: ${props => props.keyFrameName} 3s linear infinite;
+
+    @media (min-width: 420px) {
+        transform: translateX(50%);
+    }
+`
+
+const IconImageSecond = styled(Image)<{keyFrameName:string}>`
+    position: absolute;
+    top:0;
+    right:0;
+    animation: ${props => props.keyFrameName} 5s linear infinite;
+
+    @media (min-width: 420px) {
+        transform: translateX(-50%);
+    }
+`
+
+const MainImage = styled(Image)`
+    position: relative;
+`
+
+const doungdoung = keyframes`
+    0%{
+        top: -.3rem
+    }
+    50%{
+        top: .3rem
+    }
+    100%{
+        top: -.3rem
+    }
+`
 
 export default function Home() {
 
@@ -39,7 +95,16 @@ export default function Home() {
               </div>   
             </div>
             <div className='contents'>
+              <ResultImage>
+                  <div className="container">
+                      <ImageBox>
+                          <IconImageFirst keyFrameName={doungdoung} src={"/images/main-icon-01.png"} alt="" width={100} height={100} ></IconImageFirst>
+                          <IconImageSecond keyFrameName={doungdoung} src={"/images/main-icon-02.png"} alt="" width={100} height={100} ></IconImageSecond>
 
+                          <MainImage src={"/images/main.png"} alt={""} width={300} height={320}></MainImage>
+                      </ImageBox>
+                  </div>
+              </ResultImage>
             </div>
           </div>
           <div className='button'>
