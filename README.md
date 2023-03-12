@@ -7,10 +7,7 @@
 ### ✅ 미리보기
 
 <div style="display:flex; gap:.5rem;">
-    <div><img src="https://yi-jeong.github.io/assets/img/readme/princess-01.jpeg" alt="" /></div>
-    <div><img src="https://yi-jeong.github.io/assets/img/readme/princess-02.jpeg" alt="" /></div>
-    <div><img src="https://yi-jeong.github.io/assets/img/readme/princess-03.jpeg" alt="" /></div>
-    <div><img src="https://yi-jeong.github.io/assets/img/readme/princess-04.jpeg" alt="" /></div>
+    <div><img src="https://yi-jeong.github.io/assets/img/readme/princess.png" alt="" /></div>
 </div>
 
 <br>
